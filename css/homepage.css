@@ -1,0 +1,66 @@
+#logo {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#logo img {
+	width: 100%;
+}
+
+#boxes {
+	text-align: center;
+}
+
+#boxes .image {
+	display: inline-block;
+	height: 100%;
+	max-height: 300px;
+	width: auto;
+}
+
+#boxes .arrow {
+	height: auto;
+	width: 10%;
+	padding: 100px 0;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+	border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.login {
+	border-style: groove;
+	border-color: black;
+	border-width: 5px;
+  padding: 16px;
+	height: auto;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.login .links #createaccount {
+	float: left;
+}
+
+.login .links #forgotpassword {
+  float: right;
+}
