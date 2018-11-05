@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+  <head>
+  	<title>Events Details</title>	
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="css/introHCI.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+  </head>
+
+  <body>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Settings</button>
+    </div>
+
+
+
+
+    <div class="container">
+      <h1>Events Details</h1>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="events.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="profile.html"><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+<!--         <a href="explore.html"><i class="fa fa-fw fa-search"></i>Explore</a>
+ -->        <a href="questionnaire.html"><i class="fa fa-fw fa-refresh"></i>Retake Questionnaire</a>
+          <!--<a href="#"><i class="fa fa-fw fa-heart"></i>Favorites</a>-->
+        <a href="home.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+      </div>
+
+
+      <hr>
+
+      <div class="box">
+        <div class="org-name" style="z-index: 1">
+          <p>Theta Tau</p>
+        </div>
+        <div class="event-details" style="z-index: 2">
+          <p>Event: GBM</p>          
+          <p>Date: Fri 11/2</p>
+          <p>Time: 1-3pm</p>
+          <p>Location: CSE 1202</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="org-name" style="z-index: 1">
+          <p>Theta Tau</p>
+        </div>
+        <div class="event-details" style="z-index: 2">
+          <p>Event: Fundraiser</p>          
+          <p>Date: Mon 11/5</p>
+          <p>Time: 6-8pm</p>
+          <p>Location: Tapioca Express</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="org-name" style="z-index: 1">
+          <p>Theta Tau</p>
+        </div>
+        <div class="event-details" style="z-index: 2">
+          <p>Event: Social Night</p>          
+          <p>Date: Tue 11/6</p>
+          <p>Time: 7-9pm</p>
+          <p>Location: Peterson Loop</p>
+        </div>
+      </div>
+
+
+      <p>See More Events Below</p>
+
+      <form action="events.html">
+        <input type="submit" value="Return to Home Page"></input>
+      </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/greek2go.js"></script>    
+
+  </body>
+</html>

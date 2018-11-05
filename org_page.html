@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/introHCI.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  </head>
+
+  <body>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Settings</button>
+    </div>
+
+
+    <h1>Fraternity Page</h1>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+<!--       <a href="events.html"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a href="profile.html"><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+      <a href="explore.html"><i class="fa fa-fw fa-search"></i>Explore</a>
+      <a href="questionnaire.html"><i class="fa fa-fw fa-refresh"></i>Retake Questionnaire</a>
+ -->      <!--<a href="#"><i class="fa fa-fw fa-heart"></i>Favorites</a>-->
+      <a href="home.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+    </div>
+
+
+
+    <hr>
+
+    <h3>Info</h3>
+
+    <div class="org_inputs">
+      <label class="inputlabel"><b>Name of Fraternity</b></label>
+      <input type="text" placeholder="Enter name of fraternity" name="greek_name" required>
+    </div>
+
+    <div class="org_inputs">
+      <label class="inputlabel"><b>Greek Letters</b></label>
+      <input type="text" placeholder="Enter your Greek letters" name="greek_letters" required>
+    </div>
+
+    <div class="org_inputs">
+      <label class="inputlabel"><b>Description</b></label>
+      <input type="text" placeholder="Describe your fraternity" name="greek_description" required>
+    </div>
+
+    <hr>
+
+    <h3>Events</h3>
+    <p>Add events into the table below.</p>
+
+    <div id="entiregrid">
+
+      <div class="grid">
+        <table border="3">
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td>Time</td>
+              <td>Location</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+            <tr>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+              <td contenteditable='true'></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <form action="events_confirmation.html">
+      <button type="submit" id="submitbtn">Add Events</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/greek2go.js"></script>
+
+  </body>
+</html>
