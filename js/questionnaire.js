@@ -25,7 +25,6 @@ var academics_value = 0;
 $('.academics-number-button').on('click',function() {
     // get the button that was clicked
     var buttonClicked = $(this).html();
-    // console.log(buttonClicked);
     
     // store button value into academics_value
     academics_value = buttonClicked;
@@ -38,7 +37,6 @@ var athletics_value = 0;
 $('.athletics-number-button').on('click',function() {
     // get the button that was clicked
     var buttonClicked = $(this).html();
-    // console.log(buttonClicked);
     
     // store button value into athletics_value
     athletics_value = buttonClicked;
@@ -51,7 +49,6 @@ var leadership_value = 0;
 $('.leadership-number-button').on('click',function() {
     // get the button that was clicked
     var buttonClicked = $(this).html();
-    // console.log(buttonClicked);
     
     // store button value into leadership_value
     leadership_value = buttonClicked;
@@ -64,7 +61,6 @@ var social_value = 0;
 $('.social-number-button').on('click',function() {
     // get the button that was clicked
     var buttonClicked = $(this).html();
-    // console.log(buttonClicked);
     
     // store button value into social_value
     social_value = buttonClicked;
@@ -77,7 +73,6 @@ var philanthropy_value = 0;
 $('.philanthropy-number-button').on('click',function() {
     // get the button that was clicked
     var buttonClicked = $(this).html();
-    // console.log(buttonClicked);
     
     // store button value into philanthropy_value
     philanthropy_value = buttonClicked;
@@ -86,9 +81,11 @@ $('.philanthropy-number-button').on('click',function() {
 });
 
 
-// VARIABLES TO STORE DUMMY DATA FOR FIVE FRATS
+/* VARIABLES TO STORE DUMMY DATA FOR FIVE FRATS */
+// LOCALSTORAGE OBJECT
 myStorage = window.localStorage;
 
+// THETA TAU
 var theta_tau = {
     name: "Theta Tau",
     academics_value: 5, 
@@ -97,11 +94,9 @@ var theta_tau = {
     social_value: 2, 
     philanthropy_value: 1
 };
-
 var theta_tau_values = [5, 3, 4, 2, 1];
-// myStorage.setItem("theta_tau_values", theta_tau_values);
 
-
+// SIGMA CHI
 var sigma_chi = {
     name: "Sigma Chi", 
     academics_value: 3, 
@@ -110,10 +105,9 @@ var sigma_chi = {
     social_value: 4, 
     philanthropy_value: 2
 };
-
 var sigma_chi_values = [3, 5, 1, 4, 2];
 
-
+// PHI DELTA THETA
 var phi_delta_theta = {
     name: "Phi Delta Theta", 
     academics_value: 2, 
@@ -122,10 +116,9 @@ var phi_delta_theta = {
     social_value: 3, 
     philanthropy_value: 5
 };
-
 var phi_delta_theta_values = [2, 4, 1, 3, 5];
 
-
+// KAPPA SIGMA
 var kappa_sigma = {
     name: "Kappa Sigma", 
     academics_value: 1, 
@@ -134,10 +127,9 @@ var kappa_sigma = {
     social_value: 4, 
     philanthropy_value: 5
 };
-
 var kappa_sigma_values = [1, 2, 3, 4, 5];
 
-
+// BETA THETA PI
 var beta_theta_pi = {
     name: "Beta Theta Pi",     
     academics_value: 3, 
@@ -146,78 +138,81 @@ var beta_theta_pi = {
     social_value: 2, 
     philanthropy_value: 1
 };
-
 var beta_theta_pi_values = [3, 4, 5, 2, 1];
 
-
+// ARRAY OF EACH OF THE FRAT'S QUESIONNAIRE VALUES
 var frat_values = [theta_tau_values, sigma_chi_values, phi_delta_theta_values, kappa_sigma_values, beta_theta_pi_values]
 
+// ARRAY OF EACH OF THE FRAT OBJECTS
 var frats = [theta_tau, sigma_chi, phi_delta_theta, kappa_sigma, beta_theta_pi]
 
 
-
-// FUNCTION TO FIND TOP THREE FRATS TO DISPLAY ON MATCHES PAGE
-// function Comparator(a, b) {
-//     if (a[0] < b[0]) return -1;
-//     if (a[0] > b[0]) return 1;
-//     return 0;
-// }
-
+// LOCAL VARIABLES TO HELP WITH FINDING THE TOP 3 FRATS
 var keys = [];
 var values = [];
 var frats_to_values = [];
+
+// FUNCTION TO CALCULATE MATCH PERCENTAGE FOR EACH FRAT TO FIND TOP 3 FRATS
 function findTopThreeFrats() {
+
+    // LOCAL VARIABLES TO STORE TOTAL POSSIBLE DIFFERENCE AND MULTIPLY DECIMAL TO PERCENTAGE
     var total_deviation = 20;
-    // var total = 0;
     var percent = 100;
+
+    // ARRAY OF EACH OF THE USER'S VALUE, WHICH IS USED TO CALCULATE MATCH PERCENTAGE
     var user_values = [academics_value, athletics_value, leadership_value, social_value, philanthropy_value];
+
+    // LOOP THROUGH EACH FRAT TO CALCULATE MATCH PERCENTAGE WITH EACH FRAT
     for (index = 0; index < frats.length; index++) {
+
+        // LOCAL VARIABLE TO STORE TOTAL DIFFERENCE VALUE
         var total = 0;
+
+        // LOOP THROUGH EACH VALUE OF CURRENT FRAT TO FIND TOTAL DIFFERENCE VALUE
         for (num = 0; num < frat_values.length; num++) {
             total += Math.abs(user_values[num] - frat_values[index][num]);
         }
+
+        // CALCULATE MATCH PERCENTAGE
         var diff_decimal = total / total_deviation;
         var match_decimal = 1 - diff_decimal;
         var match_percent = match_decimal * percent;
-        // myStorage.setItem(match_percent, frats[index].name);
+
+        // STORE FRAT NAME AS KEY AND MATCH PERCENTAGE AS VALUE INTO LOCALSTORAGE
         myStorage.setItem(frats[index].name, match_percent);
     }
-
-    // var keys = [];
-    // var values = [];
-    // var values_to_frats = [];
-    // var index = 0;
-
-    // for (var key in myStorage) {
-    //     keys.push(key);
-    // //     console.log("IN FOR LOOP")
-    // //     values_to_frats.push([myStorage.key(index), myStorage.getItem(key)]);
-    // //     index++;
-    // }
-
-    // keys.sort();
-
-
-    // values_to_frats = values_to_frats.sort(Comparator);
 }
 
+// COMPARATOR FUNCTION TO COMPARE MATCH PERCENTAGES TO HELP FIND TOP 3 FRATS
 function Comparator(a, b) {
     if (a[1] > b[1]) return -1;
     if (a[1] < b[1]) return 1;
     return 0;
 }
 
+// LOCAL VARIABLE TO HELP ITERATE THROUGH EACH ENTRY IN LOCALSTORAGE
 var index = 0;
+
+// LOOP THROUGH EACH KEY IN LOCALSTORAGE
 for (var key in myStorage) {
+
+    // PUSH MATCH PERCENTAGE AS AN INT VALUE INTO VALUES ARRAY
     values.push(parseInt(myStorage.getItem(key), 10));
+
+    // PUSH ARRAY WITH FRAT NAME AND MATCH PERCENTAGE AS AN INT VALUE INTO FRATS_TO_VALUES ARRAY
     frats_to_values.push([myStorage.key(index), parseInt(myStorage.getItem(key), 10) ]);
-    // keys.push(key);
+
+    // INCREMENT INDEX TO ACCESS NEXT ENTRY IN LOCALSTORAGE
     index++;
 }
-var sorted_values = values.sort(function(a, b) {return b - a});
-var sorted_frats_to_values = frats_to_values.sort(Comparator);
-// keys.sort();
 
+// SORT VALUES ARRAY BY DECREASING MATCH PERCENTAGE
+var sorted_values = values.sort(function(a, b) {return b - a});
+
+// SORT FRATS_TO_VALUES ARRAY BY DECREASING MATCH PERCENTAGE
+var sorted_frats_to_values = frats_to_values.sort(Comparator);
+
+// FUNCTION TO HELP SORT FRATS
 function sortFrats() {
     for (var i = 0; i < myStorage.length; i++) {
         var key = myStorage.key(i);
@@ -228,68 +223,41 @@ function sortFrats() {
     }
 }
 
+
+
+/* MATCHES PAGE JS */
+// LOCAL VARIABLE TO DISPLAY TOP 3 FRATS AND HANDLE MAGIC NUMBER
 var org_name_1 = $('#temp'), container;
-// for (var key in grocery_list) {
-for (var index = 0; index < 3; index++) {
+var top_3 = 3;
+
+// LOOP TO DISPLAY TOP 3 FRATS
+for (var index = 0; index < top_3; index++) {
+    // CREATE CONTAINER IN HTML
     container = $('<div id="frat_1" class="container"></div>');
+
+    // APPEND CONTAINER TO ORG_NAME_1, WHICH DEALS WITH THE 'TEMP' ID
     org_name_1.append(container);
 
+    // APPEND FRAT NAME AND MATCH PERCENTAGE TO CONTAINER TO BE DISPLAYED ON MATCHES PAGE
     container.append('<div class="name">' + frats_to_values[index][0] +'</div>');
     container.append('<div class="match_percentage">' + "Match Percentage: " + frats_to_values[index][1] + "%" + '</div>');
-    // container.append('<div class="price">' + grocery_list[key].price +'</div>');
 }
 
 
 
+/* EXPLORE PAGE JS */
+// LOCAL VARIABLE TO DISPLAY ALL FRATS AND HANDLE MAGIC NUMBER
+var org_name_2 = $('#explore'), container;
 
+// LOOP TO DISPLAY TOP 3 FRATS
+for (var index = 0; index < frats.length; index++) {
+    // CREATE CONTAINER IN HTML
+    container = $('<div id="frat_2" class="container"></div>');
 
+    // APPEND CONTAINER TO ORG_NAME_1, WHICH DEALS WITH THE 'TEMP' ID
+    org_name_2.append(container);
 
-
-
-
-
-
-
-
-
-
-
-
-// var keys = [];
-// var values = [];
-// var values_to_frats = [];
-// var index = 0;
-
-// for (var key in myStorage) {
-//     // keys.push(localStorage[key]);
-//     values_to_frats.push([myStorage.key(index), myStorage.getItem(key)]);
-//     index++;
-// }
-
-// keys.sort();
-// var result=keys.join();
-// var len = result.length;
-// var formatresult;
-// for (var i=0; i<len; i++) {
-//     formatresult+= result[i]+ "\n";
-// }
-
-
-// function Comparator(a, b) {
-//     if (a[0] < b[0]) return -1;
-//     if (a[0] > b[0]) return 1;
-//     return 0;
-// }
-
-// values_to_frats = values_to_frats.sort(Comparator);
-
- // var myArray = [
- //   [1, 'alfred', '...'],
- //   [23, 'berta', '...'],
- //   [2, 'zimmermann', '...'],
- //   [4, 'albert', '...'],
- // ];
-
- // myArray = myArray.sort(Comparator);
- // console.log(myArray);
-
+    // APPEND FRAT NAME AND MATCH PERCENTAGE TO CONTAINER TO BE DISPLAYED ON MATCHES PAGE
+    container.append('<div class="name">' + frats_to_values[index][0] +'</div>');
+    container.append('<div class="match_percentage">' + "Match Percentage: " + frats_to_values[index][1] + "%" + '</div>');
+}
