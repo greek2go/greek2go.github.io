@@ -18,6 +18,8 @@ $('.org-btn').on('click',function() {
 
 
 
+/* ALLSTON: EDITS START HERE */
+
 /* FUNCTIONS TO HELP WITH SAVING QUESTIONNAIRE VALUES */
 
 // FUNCTION TO UPDATE ACADEMICS VALUE
@@ -261,3 +263,4 @@ for (var index = 0; index < frats.length; index++) {
     container.append('<div class="name">' + frats_to_values[index][0] +'</div>');
     container.append('<div class="match_percentage">' + "Match Percentage: " + frats_to_values[index][1] + "%" + '</div>');
 }
+/* ALLSTON: EDITS END HERE */
