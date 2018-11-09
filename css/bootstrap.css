@@ -2654,7 +2654,8 @@ input[type="button"].btn-block {
 }
 
 .fade {
-  opacity: 0;
+  /* setting opacity to 0 causes carousel images to disappear*/
+  opacity: 100;
   -webkit-transition: opacity 0.15s linear;
           transition: opacity 0.15s linear;
 }
