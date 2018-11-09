@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/Mark/Documents/COGS120/Cogs%20120%20Main%20Page.html -->
+<html>
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	  <title>Home Page</title>
+	  <meta name="author" content="">
+	  <meta name="description" content="">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href="./css/homepage.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="logo">
+			<img src="./images/greek2gofinal.png">
+		</div>
+
+		<div id="boxes">
+			<img src="./images/step1.png" class="image">
+			<!-- <img src="./images/greenarrow.png" class="arrow">-->
+			<img src="./images/step2.png" class="image">
+		<!-- <img src="./images/greenarrow.png" class="arrow"> -->
+			<img src="./images/step3.png" class="image">
+		</div>
+	<form action="events.html">
+
+<!--         <p>Are you signing in as a Student or Fraternity?</p>
+
+        <div class="greek-organization">
+          <button type="button" class="signin-btn">Student</button>
+          <button type="button" class="signin-btn">Fraternity</button>
+        </div>
+ -->
+		<div class="login">
+				<label for="email"><b>Email</b></label>
+				<input type="text" placeholder="Enter Email Address" name="email" required>
+
+				<label for="password"><b>Password</b></label>
+				<input type="text" placeholder="Enter Password" name="password" required>
+
+		<!--     <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+		 -->		<button type="submit">Login</button>
+
+		 		<input id="org_login" type="button" onclick="location.href='org_log_in.html';" value="Fraternity? Click here"></input>
+
+		    <div class="links">
+		     	<a href="index.html" id="create_student_account">Create Student Account</a>
+		     	<a href="org_sign_up.html" id="create_frat_account">Create Fraternity Account</a>
+				<a href="forgot_password.html" id="forgotpassword">Forgot Password?</a>
+		    </div>
+		</div>
+	</form>
+	<!--
+	  <script src="./Cogs 120 Main Page_files/jquery.min.js.download"></script>
+	  <script src="file:///C:/Users/Mark/Documents/COGS120/js/script.js"></script>
+	-->
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/questionnaire.js"></script>
+    <script src="js/greek2go.js"></script>
+
+
+	</body>
+</html>

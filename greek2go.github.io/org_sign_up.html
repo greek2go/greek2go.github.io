@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+  <head>
+  	<title>Sign Up Page</title>	
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="css/introHCI.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- NOTE: change value of 'action' to the link of our feed page/homepage -->
+    <form action="org_page.html" style="border:1px solid #ccc">
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create a fraternity account.</p>
+        <hr>
+
+<!--         <p>Which type of Greek organization are you signing up as?</p>
+
+        <div class="greek-organization">
+          <button type="button" class="org-btn">Fraternity</button>
+          <button type="button" class="org-btn">Sorority</button>
+        </div>
+ -->
+        <label for="org-name"><b>Fraternity Name</b></label>
+        <input type="text" placeholder="Enter Fraternity Name" name="org-name" required>
+
+        <label class="org-letters"><b>Greek Letters</b></label>
+        <input type="text" placeholder="Enter your Greek letters" name="org-letters" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <div class="clearfix">
+          <!-- NOTE: make cancel button link back to login page -->
+          <button type="submit" class="signupbtn">Sign Up</button>
+  <!--         <button type="button" class="cancelbtn">Cancel</button>
+   -->      </div>
+      </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/questionnaire.js"></script>
+    <script src="js/greek2go.js"></script>
+
+  </body>
+</html>

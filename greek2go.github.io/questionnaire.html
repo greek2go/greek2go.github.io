@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+  <head>
+  	<title>Questionnaire</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="css/introHCI.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Settings</button>
+    </div>
+
+
+
+
+    <div class="container">
+      <h1>Questionnaire</h1>
+      <p>Please fill out the questionnaire to get matched with fraternities with similar attributes.</p>
+
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+<!--         <a href="events.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="profile.html"><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+        <a href="explore.html"><i class="fa fa-fw fa-search"></i>Explore</a>
+        <a href="questionnaire.html"><i class="fa fa-fw fa-refresh"></i>Retake Questionnaire</a>
+ -->          <!--<a href="#"><i class="fa fa-fw fa-heart"></i>Favorites</a>-->
+        <a href="home.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+      </div>
+
+
+      <hr>
+
+      <form action="matches.html" style="border:1px solid #ccc">
+
+              <h3>What kind of Greek organization are you interested in?</h3>
+              <h4>How important are the following attributes to you?</h4>
+              <p>Scale: 1 = Not at all, 2 = Very little, 3 = Somewhat, 4 = Very much, 5 = Completely</p>
+
+              <div class="attribute" id="academics">
+                <!-- Raul: I added boldfont & underlines for the attribute names-->
+                <span style="color:black;font-weight:bold"><u>Academics:</u></span>
+                <span>Grades, Homework</span>
+                <button type="button" class="number-button">1</button>
+                <button type="button" class="number-button">2</button>
+                <button type="button" class="number-button">3</button>
+                <button type="button" class="number-button">4</button>
+                <button type="button" class="number-button">5</button>
+              </div>
+
+              <div class="attribute" id="athletics">
+                <span style="color:black;font-weight:bold"><u>Athletics:</u></span>
+                <span>Sports, Exercise</span>
+                <button type="button" class="number-button">1</button>
+                <button type="button" class="number-button">2</button>
+                <button type="button" class="number-button">3</button>
+                <button type="button" class="number-button">4</button>
+                <button type="button" class="number-button">5</button>
+              </div>
+
+              <div class="attribute" id="leadership">
+                <span style="color:black;font-weight:bold"><u>Leadership:</u></span>
+                <span>Communication, Guidance</span>
+                <button type="button" class="number-button">1</button>
+                <button type="button" class="number-button">2</button>
+                <button type="button" class="number-button">3</button>
+                <button type="button" class="number-button">4</button>
+                <button type="button" class="number-button">5</button>
+              </div>
+
+              <div class="attribute" id="social">
+                <span style="color:black;font-weight:bold"><u>Social:</u></span>
+                <span>Hangouts, Parties</span>
+                <button type="button" class="number-button">1</button>
+                <button type="button" class="number-button">2</button>
+                <button type="button" class="number-button">3</button>
+                <button type="button" class="number-button">4</button>
+                <button type="button" class="number-button">5</button>
+              </div>
+
+              <div class="attribute" id="philanthropy">
+                <span style="color:black;font-weight:bold"><u>Philanthropy:</u></span>
+                <span>Volunteer, Charity</span>
+                <button type="button" class="number-button">1</button>
+                <button type="button" class="number-button">2</button>
+                <button type="button" class="number-button">3</button>
+                <button type="button" class="number-button">4</button>
+                <button type="button" class="number-button">5</button>
+              </div>
+
+        <div class="submit-button">
+          <button type="submit" class="submitbtn" onclick="findTopThreeFrats()">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/questionnaire.js"></script>
+    <script src="js/greek2go.js"></script>
+
+  </body>
+</html>

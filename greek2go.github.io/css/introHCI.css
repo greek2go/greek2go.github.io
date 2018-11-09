@@ -1,0 +1,301 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+/*.example-class-selector p {
+	 Colors are in hexadecimal: http://www.colorpicker.com/
+	color: #CC00AA;
+}*/
+
+/* this style exists to make it obvious that you've successfully linked
+   the CSS to the page. feel free to remove it once the link is working. */
+body {
+     border: 1px dotted gray;
+		 background-image:  url("geisellib.png");
+		 background-repeat: no-repeat;
+		 background-size: 100% 100%;
+     padding: 225px;
+     text-align: center;
+}
+
+.project {
+     margin-left: 20px;
+}
+
+/* find project class, then in project class, find all p elements */
+/* .project = project class, #project = project id */
+.project p {
+     font-variant: small-caps;
+}
+
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     background: url("http://lorempixel.com/1140/283");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;
+}
+
+
+
+/* SIGN UP FORM CSS */
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+    border: 3px solid #000000;
+    margin-bottom: 0px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #005e94;
+  width: 10%;
+  color: #ffbe00;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #005e94;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+	background-color: #005e94;
+  float: center;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+/* Raul: I added a white background to distinguish things a bit better */
+.container {
+	background-color: white;
+  padding: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-style: groove;
+	border-color: black;
+  border-width: 2px;
+}
+#eventsbox {
+	padding-bottom: inherit;
+}
+#eventsdetailbox{
+	padding-bottom: inherit;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  text-align: center;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+.box {
+    float: left;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    /*font-size: */
+}
+
+/* ARROW CSS */
+i {
+     border: solid black;
+     border-width: 0 3px 3px 0;
+     display: inline-block;
+     padding: 3px;
+}
+
+.right {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+     float: left;
+     margin-left: 10px;
+     margin-top: 10px;
+     padding: 5px;
+}
+
+.left {
+     transform: rotate(135deg);
+     -webkit-transform: rotate(135deg);
+     float: left;
+     margin-left: 10px;
+     margin-top: 10px;
+     padding: 5px;
+}
+
+.favoritebtn {
+     padding: 14px 20px;
+     background-color: #ffbe00;
+}
+
+.deletebtn {
+     padding: 14px 20px;
+     background-color: #f44336;
+}
+
+
+
+/* QUESTIONNAIRE BUTTON CSS */
+
+.number-button {
+  background-color: #005e93;
+  width: 10%;
+}
+
+.org-btn {
+  background-color: #005e93;
+  width: 10%;
+}
+
+.submitbtn {
+  background-color: #005e93;
+  width: 10%;
+}
+
+/* Raul: this is my test for the questionnaire buttons styling */
+.attribute .number-button {
+	color:#ffbe00;
+	font-weight:bold;
+}
+
+
+/* MATCHES PAGE CSS */
+.org-box {
+  /*background-color: #4CAF50;*/
+  /*color: white;*/
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid gray;
+  display: inline-block;
+}
+
+.homepage-btn {
+  background-color: #005e93;
+  width: 10%;
+}
+
+.reset-password-btn {
+  background-color: #005e93;
+  width: 10%;
+}
+
+/* SIDEBAR CSS */
+.sidebar {
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    width: 10%;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 5px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 1px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+/* this is where the css for the side bar ends */
+
+
+
+/* ORG PAGE CSS */
+table {
+  table-layout: fixed;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

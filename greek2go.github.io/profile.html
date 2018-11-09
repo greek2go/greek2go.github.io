@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+  <head>
+  	<title>Profile</title>	
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="css/introHCI.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  </head>
+
+  <body>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Settings</button>
+    </div>
+
+
+
+  <!-- NOTE: change value of 'action' to the link of our feed page/homepage -->
+    <div class="container">
+      <h1>Profile</h1>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="events.html"><i class="fa fa-fw fa-home"></i>Home</a>
+<!--         <a href="profile.html"><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+        <a href="explore.html"><i class="fa fa-fw fa-search"></i>Explore</a>
+        <a href="questionnaire.html"><i class="fa fa-fw fa-refresh"></i>Retake Questionnaire</a>
+ -->           <!--<a href="#"><i class="fa fa-fw fa-heart"></i>Favorites</a>-->
+        <a href="home.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+      </div>
+
+      <hr>
+
+      <p>In the Profile Section, you can see your current top 3 matches and reset your password.</p>
+
+      <p>Here are your top 3 matches:</p>
+      <div id="temp">
+
+      </div>
+
+
+      <form action="profile_confirmation.html" style="border:1px solid #ccc">
+        <label for="new-password"><b>New Password</b></label>
+        <input type="text" placeholder="Enter New Password" name="new-password" required>
+
+        <div class="reset-password-button">
+          <button type="submit" class="reset-password-btn">Reset Password</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/questionnaire.js"></script>    
+    <script src="js/greek2go.js"></script>
+
+  </body>
+</html>

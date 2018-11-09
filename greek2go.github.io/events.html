@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html>
+  <head>
+  	<title>Events - Returning User</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="css/introHCI.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Settings</button>
+    </div>
+
+
+    <!-- NOTE: change value of 'action' to the link of our feed page/homepage -->
+    <div class="container" id="eventsbox">
+      <h1>Events</h1>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="events.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="profile.html"><i class="fa fa-fw fa-user-circle-o"></i>Profile</a>
+        <a href="explore.html"><i class="fa fa-fw fa-search"></i>Explore</a>
+        <a href="questionnaire.html"><i class="fa fa-fw fa-refresh"></i>Retake Questionnaire</a>
+        <!--<a href="#"><i class="fa fa-fw fa-heart"></i>Favorites</a>-->
+        <a href="home.html"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+      </div>
+
+
+
+      <hr>
+
+      <div>
+        <i class="left"></i>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Sun 10/28</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Mon 10/29</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>2</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Tue 10/30</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>1</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Wed 10/31</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>3</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Thu 11/1</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>2</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Fri 11/2</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>1</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="date" style="z-index: 1">
+          <p>Sat 11/3</p>
+        </div>
+        <div class="number-of-events" style="z-index: 2">
+          <p>Number of Events</p>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div>
+        <i class="right"></i>
+      </div>
+
+      <div class="button-duo">
+        <!-- NOTE: make cancel button link back to login page -->
+        <form action="events_details.html">
+          <button type="submit" class="addbtn">Events Details</button>
+        </form>
+<!--         <form action="events_details.html">
+          <button type="button" class="deletebtn">Delete</button>
+          <button type="button" class="favoritebtn">Favorite</button>
+
+        </form>
+ -->
+      </div>
+    </div>
+
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/greek2go.js"></script>
+
+
+  </body>
+</html>
