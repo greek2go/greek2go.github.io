@@ -45,19 +45,28 @@
           <button type="button" class="signin-btn">Organization</button>
         </div>
  -->
-			<div class="login">
-				Email<input type="text" id="email" required/>
-				Password<input type="text" name="pswd" id="pswd" required/>
+	<form name="login" onsubmit="return validate()" action="events.html" method="post">
 
-				<button type="submit">Login</button>
+<!--    <p>Are you signing in as a Student or Organization?</p>
 
-		   <div class="links">
-		     <a href="index.html" id="createstudentacc">Create Student Account</a>
-		     <a href="org_sign_up.html" id="createorgacc">Create Org Account</a>
-				<a href="forgot_password.html" id="forgotpassword">Forgot Password?</a>
-		   </div>
-			</div>
-		</form>
+        <div class="greek-organization">
+          <button type="button" class="signin-btn">Student</button>
+          <button type="button" class="signin-btn">Organization</button>
+        </div>
+ -->
+	<div class="login">
+		Email<input type="text" id="email" required/>
+		Password<input type="text" name="pswd" id="pswd" required/>
+
+		<button type="submit">Login</button>
+
+	<div class="links">
+		    <a href="index.html" id="createstudentacc">Create Student Account</a>
+		    <a href="org_sign_up.html" id="createorgacc">Create Org Account</a>
+		<a href="forgot_password.html" id="forgotpassword">Forgot Password?</a>
+		</div>
+		</div>
+	</form>
 
     <script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/login.js"></script>
